@@ -27,7 +27,7 @@ public class ConexaoMySQL {
     String mydatabase = "emsadv";        //nome do seu banco de dados
     String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
     String usuario = "root";
-    String senha = "unicuritiba";
+    String senha = "123456";
     connection = DriverManager.getConnection(url, usuario, senha);
     //Testa sua conexão//  
     if (connection != null) {

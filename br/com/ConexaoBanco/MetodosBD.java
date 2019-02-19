@@ -5,12 +5,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class MetodosBD extends ConexaoMySQL {
+public class MetodosBD {
 
     public boolean cadastraCliente(String nomeCliente, String telefone, String endereco, String email, String dataNascimento) throws SQLException {
         boolean retorno = false;
@@ -22,7 +20,7 @@ public class MetodosBD extends ConexaoMySQL {
         if (rs.next()) {  
             JOptionPane.showMessageDialog(null, "Já existe este cliente."); 
         } else { 
-            query = "INSERT INTO `emsadv`.`clientes` (`nomeCliente`, `telefone`, `enderecoClient`, `email`, `dataDeNascimento`) VALUES ('" + nomeCliente + "', '" + telefone + "', '" + endereco + "', '" + email + "', '" + dataNascimento + "');";
+            query = "INSERT INTO `emsadv`.`clientes` (`NomeCliente`, `telefone`, `enderecoClient`, `email`, `dataDeNascimento`) VALUES ('" + nomeCliente + "', '" + telefone + "', '" + endereco + "', '" + email + "', '" + dataNascimento + "');";
             inserir = conn.prepareStatement(query);
             int result = inserir.executeUpdate();
             if(result > 0){
@@ -52,20 +50,6 @@ public class MetodosBD extends ConexaoMySQL {
         }
             
         return retorno;
-    }
-    
-    public String[] clientesBanco (String pesquisa) throws SQLException {
-        String[] clientes = null;
-        Connection conn = getConexaoMySQL();
-        String query = "SELECT * FROM emsadv.clientes;";
-        PreparedStatement inserir = conn.prepareStatement(query);
-        ResultSet rs;
-        int tamBan = inserir.getResultSet().getInt(query), cont = 0;
-        while (cont < tamBan) {
-            clientes[cont] = inserir.getResultSet().toString();
-        }
-        
-        return clientes;
     }
     
     // Metodo que insere no Banco de Dados
@@ -117,5 +101,4 @@ public class MetodosBD extends ConexaoMySQL {
         return retorno;
 
     }
-    
 }

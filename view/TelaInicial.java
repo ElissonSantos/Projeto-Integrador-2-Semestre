@@ -10,35 +10,45 @@ public class TelaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu6 = new javax.swing.JMenu();
         gestaoM = new javax.swing.JMenu();
-        atendimentoB = new javax.swing.JMenuItem();
         clientesB = new javax.swing.JMenuItem();
-        atividadesM = new javax.swing.JMenu();
-        calendarioB = new javax.swing.JMenuItem();
-        tarefasB = new javax.swing.JMenuItem();
-        processosM = new javax.swing.JMenu();
-        financeiroM = new javax.swing.JMenu();
-        Documentos = new javax.swing.JMenu();
-        arquivosB = new javax.swing.JMenuItem();
-        modelosB = new javax.swing.JMenuItem();
 
         setAlwaysOnTop(true);
         setResizable(false);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 70)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("EMS Advocacia");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(77, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 856, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(158, 158, 158)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(205, Short.MAX_VALUE))
+        );
 
         jMenu6.setText("Inicio");
         jMenuBar1.add(jMenu6);
 
         gestaoM.setText("Gestão");
-
-        atendimentoB.setText("Atendimento");
-        atendimentoB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                atendimentoBActionPerformed(evt);
-            }
-        });
-        gestaoM.add(atendimentoB);
 
         clientesB.setText("Clientes");
         clientesB.addActionListener(new java.awt.event.ActionListener() {
@@ -50,104 +60,28 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuBar1.add(gestaoM);
 
-        atividadesM.setText("Atividades");
-
-        calendarioB.setText("Calendario");
-        calendarioB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calendarioBActionPerformed(evt);
-            }
-        });
-        atividadesM.add(calendarioB);
-
-        tarefasB.setText("Painel de Tarefas");
-        tarefasB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tarefasBActionPerformed(evt);
-            }
-        });
-        atividadesM.add(tarefasB);
-
-        jMenuBar1.add(atividadesM);
-
-        processosM.setText("Processos");
-        jMenuBar1.add(processosM);
-
-        financeiroM.setText("Financeiro");
-        jMenuBar1.add(financeiroM);
-
-        Documentos.setText("Documentos");
-
-        arquivosB.setText("Arquivos");
-        arquivosB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                arquivosBActionPerformed(evt);
-            }
-        });
-        Documentos.add(arquivosB);
-
-        modelosB.setText("Modelos");
-        modelosB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modelosBActionPerformed(evt);
-            }
-        });
-        Documentos.add(modelosB);
-
-        jMenuBar1.add(Documentos);
-
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 629, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void atendimentoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atendimentoBActionPerformed
-        Atendimento atendimento = new Atendimento();
-        atendimento.setVisible(rootPaneCheckingEnabled);
-        dispose();
-    }//GEN-LAST:event_atendimentoBActionPerformed
-
     private void clientesBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesBActionPerformed
         Clientes clientes = new Clientes();
         clientes.setVisible(rootPaneCheckingEnabled);
         dispose();
     }//GEN-LAST:event_clientesBActionPerformed
-
-    private void tarefasBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tarefasBActionPerformed
-        Tarefas tarefas = new Tarefas();
-        tarefas.setVisible(rootPaneCheckingEnabled);
-        dispose();
-    }//GEN-LAST:event_tarefasBActionPerformed
-
-    private void calendarioBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calendarioBActionPerformed
-        Calendario calendario = new Calendario();
-        calendario.setVisible(rootPaneCheckingEnabled);
-        dispose();
-    }//GEN-LAST:event_calendarioBActionPerformed
-
-    private void modelosBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelosBActionPerformed
-        Modelos modelos = new Modelos();
-        modelos.setVisible(rootPaneCheckingEnabled);
-        dispose();
-    }//GEN-LAST:event_modelosBActionPerformed
-
-    private void arquivosBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arquivosBActionPerformed
-        Arquivos arquivos = new Arquivos();
-        arquivos.setVisible(rootPaneCheckingEnabled);
-        dispose();
-    }//GEN-LAST:event_arquivosBActionPerformed
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -181,18 +115,11 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu Documentos;
-    private javax.swing.JMenuItem arquivosB;
-    private javax.swing.JMenuItem atendimentoB;
-    private javax.swing.JMenu atividadesM;
-    private javax.swing.JMenuItem calendarioB;
     private javax.swing.JMenuItem clientesB;
-    private javax.swing.JMenu financeiroM;
     private javax.swing.JMenu gestaoM;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem modelosB;
-    private javax.swing.JMenu processosM;
-    private javax.swing.JMenuItem tarefasB;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
